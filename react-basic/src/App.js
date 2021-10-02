@@ -6,11 +6,9 @@ const Title = () => <h1>แอพบัญชี รายรับ-รายจ
 const Transation = () => {
   return (
     <ul className="item-list">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        <Item title="ค่าอาหาร" amount="2000"/>
+        <Item title="ค่ารถ" amount="3000"/>
+        <Item title="ค่าน้ำมัน" amount="1500"/>
     
           {/* <li>ค่าอาหาร <span> -1500</span></li>
           <li>เงินเดือน <span> +10000</span></li> */}

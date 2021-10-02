@@ -1,9 +1,9 @@
 
-const Item = () => {
+const Item = (props) => {
     const name = "ค่าเดินทาง"
     const amount = 500
     return (
-    <li className="Item"> {name} <span> -{amount} </span></li>
+    <li > {props.title} <span> {props.amount} </span></li>
     );
 }
 
