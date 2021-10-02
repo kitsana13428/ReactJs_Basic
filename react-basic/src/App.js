@@ -1,10 +1,14 @@
 import Item from "./component/item";
+import "./App.css"
 
-const Title = () => <h1>รายรับ รายจ่าย</h1>
-const Description = () => <p>บันทึกข้อมูลในแต่ละวัน</p>
+const Title = () => <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
+// const Description = () => <p>บันทึกข้อมูลในแต่ละวัน</p>
 const Transation = () => {
   return (
-    <ul>
+    <ul className="item-list">
+        <Item />
+        <Item />
+        <Item />
         <Item />
         <Item />
     
@@ -15,13 +19,11 @@ const Transation = () => {
 }
 
 
-function App() {
-  const center = {textAlign:"center"}
+function App() { 
   return (
-    <div style={center}> 
+    <div className="container"> 
         <Title />
-        <Description />
-        <Transation />  
+        <Transation />    
     </div>
   );
 }

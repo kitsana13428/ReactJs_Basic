@@ -1,4 +1,3 @@
-import './item.css'
 
 const Item = () => {
     const name = "ค่าเดินทาง"
