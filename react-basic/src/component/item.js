@@ -1,8 +1,10 @@
+import './item.css'
+
 const Item = () => {
     const name = "ค่าเดินทาง"
     const amount = 500
     return (
-    <li> {name} <span> -{amount} </span></li>
+    <li className="Item"> {name} <span> -{amount} </span></li>
     );
 }
 

@@ -16,8 +16,9 @@ const Transation = () => {
 
 
 function App() {
+  const center = {textAlign:"center"}
   return (
-    <div> 
+    <div style={center}> 
         <Title />
         <Description />
         <Transation />  
