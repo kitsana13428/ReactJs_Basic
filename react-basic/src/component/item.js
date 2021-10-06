@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types'; // อิมพอต ป็อปไทร์มาใช้
 
 const Item = (props) => {
-    const name = "ค่าเดินทาง"
-    const amount = 500
     return (
     <li > {props.title} <span> {props.amount} </span></li>
     );
 }
-
+Item.propTypes = {
+    title:PropTypes.string.isRequired,
+    amount:PropTypes.number.isRequired
+}
 export default Item

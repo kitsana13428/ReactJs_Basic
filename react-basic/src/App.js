@@ -6,12 +6,12 @@ const Title = () => <h1>แอพบัญชี รายรับ-รายจ
 // const Description = () => <p>บันทึกข้อมูลในแต่ละวัน</p>
 const Transation = () => {
   const data = [
-    {title:"ค่ารถ", amount:"3000"},
-    {title:"ค่าอาหาร", amount:"2000"},
-    {title:"ค่าน้ำมัน", amount:"1500"},
-    {title:"ค่ายา", amount:"1000"},
-    {title:"ค่าขนม", amount:"300"},
-    {title:"ค่าครีม", amount:"900"}
+    {title:"ค่ารถ", amount:3000},
+    {title:"ค่าอาหาร", amount:2000},
+    {title:"ค่าน้ำมัน", amount:1500},
+    {title:"ค่ายา", amount:1000},
+    {title:"ค่าขนม", amount:300},
+    {title:"ค่าครีม", amount:900}
   ]
   return (
     <ul className="item-list">
