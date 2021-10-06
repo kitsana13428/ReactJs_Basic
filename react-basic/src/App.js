@@ -11,11 +11,11 @@ const Transation = () => {
   ]
   return (
     <ul className="item-list">
-        <Item title={data[0].title} amount={data[0].amount}/>
-        <Item title={data[1].title} amount={data[1].amount}/>
-        <Item title={data[2].title} amount={data[2].amount}/>
-          {/* <li>ค่าอาหาร <span> -1500</span></li>
-          <li>เงินเดือน <span> +10000</span></li> */}
+       {data.map((element) => {
+         return <Item title = {element.title} amount = {element.amount}/> //array.map ลูปอาเรย์มาแสดง
+       })
+       }
+  
       </ul> 
   );
 }
