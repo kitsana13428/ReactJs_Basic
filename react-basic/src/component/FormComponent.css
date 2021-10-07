@@ -1,0 +1,36 @@
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color:rgb(6, 214, 58);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color:rgb(3, 194, 50);
+}
+
+
