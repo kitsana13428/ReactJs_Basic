@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './FormComponent.css'
+import { v4 as uuidv4 } from 'uuid'; //อิมพอตยูไอดีมาใช้ สร้างไอดีอัตโนมัติ
 
-const FormComponent = () => {
+const FormComponent = (props) => {
 
     const [title,setTitle] = useState('') //สร้าง ยูสสเตจ 
     const [amount,setAmount] = useState(0)
@@ -17,10 +18,11 @@ const FormComponent = () => {
     const saveItem = (event) => {
         event.preventDefault(); //ไม่ให้จอรีเฟช ไม่ให้เคลียค่า
         const itemData = {
+            id:uuidv4(),
             title:title,
             amount:Number(amount)
         }
-        console.log(itemData);
+        props.onAddItem(itemData);
         setTitle('') //คืนค่าให้เป็นค่าว่าง
         setAmount(0) //ให้ค่าเป็นค่าเริ่มต้น
     }
@@ -43,4 +45,4 @@ const FormComponent = () => {
     )
 }
 
-export default FormComponent
+export default FormComponent;

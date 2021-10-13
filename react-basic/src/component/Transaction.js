@@ -1,0 +1,18 @@
+import Item from "./item";
+
+const Transaction = (props) => {
+    const {items} = props
+    return (
+      <ul className="item-list">
+         {items.map((element) => {
+          //  return <Item title = {element.title} amount = {element.amount}/> //array.map ลูปอาเรย์มาแสดง
+           return <Item {...element} key = {element.id} /> //ดึงมาใช้แบบสั้น และใช้ uid
+         })
+       }
+    
+        </ul> 
+    );
+  }
+
+  export default Transaction;
+  
