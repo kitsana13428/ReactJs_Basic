@@ -12,10 +12,16 @@ input {
     width: 100%;
     cursor: pointer;
     font-size: 16px;
+    background-color: white;
+}
+
+input:hover {
+    background-color: rgb(233, 233, 233);
 }
 
 input:focus {
     outline: none;
+    
 }
 
 .btn {
