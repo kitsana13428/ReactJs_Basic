@@ -4,10 +4,7 @@ import FormComponent from "./component/FormComponent"; //ดึงเข้า�
 import "./App.css"
 import { useState } from "react";
 import DataContext from "./data/DataContext";
-
-
-const Title = () => <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
-// const Description = () => <p>บันทึกข้อมูลในแต่ละวัน</p>
+import ReportComponent from "./component/ReportComponent";
 
 function App() { //เรียกใช้คอมโพแนน
 
@@ -21,9 +18,10 @@ function App() { //เรียกใช้คอมโพแนน
       })
     }
   return (
-  <DataContext.Provider value={"kitsana"}>
+  <DataContext.Provider value={"คอปเตอร์"}>
      <div className="container"> 
-        <Title /> 
+        <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
+        <ReportComponent />
         <FormComponent onAddItem = {onAddNewItem}/>
         <Transaction items = {items}/>  
     </div>  
