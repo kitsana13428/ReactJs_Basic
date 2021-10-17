@@ -12,11 +12,7 @@ const Title = () => <h1>แอพบัญชี รายรับ-รายจ
 function App() { //เรียกใช้คอมโพแนน
 
   const initData = [
-    {id:1,title:"ค่ารถ", amount:-3000},
-    {id:2,title:"ค่าอาหาร", amount:-2000},
-    {id:3,title:"ค่าน้ำมัน", amount:-1500},
-    {id:4,title:"ค่ายาหมอ", amount:-1000},
-    {id:4,title:"เงินเดือน", amount:25000}  
+      
   ]
     const [items,setItems] = useState(initData)
     const onAddNewItem = (newItem)=> {
