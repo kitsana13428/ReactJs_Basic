@@ -3,7 +3,7 @@ import Transaction from "./component/Transaction";
 import FormComponent from "./component/FormComponent"; //ดึงเข้ามาใช้งาน
 import "./App.css"
 import { useState } from "react";
-
+import DataContext from "./data/DataContext";
 
 
 const Title = () => <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
@@ -21,12 +21,13 @@ function App() { //เรียกใช้คอมโพแนน
       })
     }
   return (
-    <div className="container"> 
+  <DataContext.Provider value={"kitsana"}>
+     <div className="container"> 
         <Title /> 
         <FormComponent onAddItem = {onAddNewItem}/>
         <Transaction items = {items}/>  
-          
-    </div>
+    </div>  
+  </DataContext.Provider>
   );
 }
 
