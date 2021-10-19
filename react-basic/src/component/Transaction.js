@@ -1,10 +1,10 @@
 import Item from "./item";
 import DataContext from "../data/DataContext";
-import { useContext } from "react"; //ใช้ use context
+
 
 const Transaction = (props) => {
     const {items} = props
-    const name = useContext(DataContext) //เอา use context เก็บค่าไว้ในตัวแปร name
+    
     return (
       <div>
         <ul className="item-list">
@@ -14,7 +14,7 @@ const Transaction = (props) => {
          })
        }
         </ul> 
-        {name}
+
       </div>
     );
   }

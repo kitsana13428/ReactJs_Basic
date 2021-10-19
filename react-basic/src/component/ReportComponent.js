@@ -2,10 +2,11 @@ import { useContext } from "react"
 import DataContext from "../data/DataContext"
 
 const ReportComponent=()=> {
-    const name = useContext(DataContext)
     return (
         <div>
-            ยินดีต้อนรับ : {name}
+        <DataContext.Consumer> 
+            {context => <p>รายรับ : {context.income} รายจ่าย : {context.expense}</p>}
+        </DataContext.Consumer>
         </div>
     )
 }

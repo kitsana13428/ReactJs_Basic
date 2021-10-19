@@ -18,7 +18,12 @@ function App() { //เรียกใช้คอมโพแนน
       })
     }
   return (
-  <DataContext.Provider value={"คอปเตอร์"}>
+  <DataContext.Provider value={
+    {
+      income : 5000,
+      expense : -8000
+    }
+  }>
      <div className="container"> 
         <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
         <ReportComponent />
