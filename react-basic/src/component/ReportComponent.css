@@ -1,0 +1,41 @@
+.report-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.report-container>div{
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+.report-container>div:first-of-type{
+    border-right: 1px solid;
+}
+
+.report{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+h1.headSum{
+    cursor: pointer;
+    color:black
+}
+
+.report.plus{
+    cursor: pointer;
+    font-weight:bold;
+    color:green;
+}
+
+.report.minus{
+    cursor: pointer;
+    font-weight:bold;
+    color:red;
+}
