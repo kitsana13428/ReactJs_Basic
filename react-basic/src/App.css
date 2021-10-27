@@ -41,3 +41,20 @@ body {
   justify-content: space-between;
   border-radius: 10px;
 }
+
+.SH {
+    width: 50px;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.HI {
+  width: 50px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@
 import Transaction from "./component/Transaction";
 import FormComponent from "./component/FormComponent"; //ดึงเข้ามาใช้งาน
 import "./App.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect , useReducer } from "react";
 import DataContext from "./data/DataContext";
 import ReportComponent from "./component/ReportComponent";
 
@@ -33,21 +33,36 @@ function App() { //เรียกใช้คอมโพแนน
       setReportExpense(expense)
     },[items,reportIncome,reportExpense])
 
-  return (
-  <DataContext.Provider value={
-    {
-      income : reportIncome,
-      expense : reportExpense
+    //reducer state ใช้งาน
+    const [showReport , setShowReport] = useState(true)
+    const reducer = (state,action) => {
+          switch(action.type){
+            case "SHOW" :
+              return setShowReport(true)
+            case "HIDE" :
+              return setShowReport(false)
+          }
     }
-  }>
-     <div className="container"> 
-        <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
-        <ReportComponent />
-        <FormComponent onAddItem = {onAddNewItem}/>
-        <Transaction items = {items}/>  
-    </div>  
-  </DataContext.Provider>
-  );
+
+    const [result, dispatch] = useReducer(reducer,showReport)
+    return (
+      <DataContext.Provider value={
+        {
+          income : reportIncome,
+          expense : reportExpense
+        }
+      }>
+         <div className="container"> 
+            <h1>แอพบัญชี รายรับ-รายจ่าย</h1>
+            {showReport && <ReportComponent />}
+            <h1>{result}</h1>
+            <button className="SH" onClick={() => dispatch({type:"SHOW"})}>แสดง</button> 
+            <button className="HI" onClick={() => dispatch({type:"HIDE"})}>ซ่อน</button> 
+            <FormComponent onAddItem = {onAddNewItem}/>
+            <Transaction items = {items}/>   
+        </div>  
+      </DataContext.Provider>
+    )
 }
 
 export default App;
